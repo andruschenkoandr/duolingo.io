@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Language Learning</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <main class="app">
+
+        <h1>Language Learning</h1>
+        <p class="subtitle">Перевір знання англійської мови</p>
+
+        <section class="statistics">
+            <div class="statistic">
+                <span class="statistic-title">Слово</span>
+                <span id="step">1 / 10</span>
+            </div>
+
+            <div class="statistic">
+                <span class="statistic-title">Правильно</span>
+                <span id="correct-count">0</span>
+            </div>
+
+            <div class="statistic">
+                <span class="statistic-title">Неправильно</span>
+                <span id="incorrect-count">0</span>
+            </div>
+        </section>
+
+        <div class="progress-container">
+            <div id="progress-bar"></div>
+        </div>
+
+        <section class="word-card" id="word-card">
+            <p class="card-title">Переклади це слово</p>
+            <h2 id="english-word">Apple</h2>
+            <p class="click-hint">Натисни на слово, щоб перевірити відповідь</p>
+        </section>
+
+        <div class="answer-section">
+            <label for="translation-input">Твій переклад:</label>
+
+            <input
+                type="text"
+                id="translation-input"
+                placeholder="Введи переклад українською"
+                autocomplete="off"
+            >
+
+            <p id="message">Введи переклад слова.</p>
+        </div>
+
+    </main>
+
+    <div class="modal" id="result-modal">
+        <div class="modal-content">
+
+            <h2>Результат навчання</h2>
+
+            <p class="final-score" id="final-score">0%</p>
+
+            <p id="level-text"></p>
+
+            <div class="final-statistics">
+                <p>Правильних відповідей: <span id="final-correct">0</span></p>
+                <p>Неправильних відповідей: <span id="final-incorrect">0</span></p>
+            </div>
+
+            <button id="restart-button">Почати знову</button>
+
+        </div>
+    </div>
+
+</body>
+</html>
